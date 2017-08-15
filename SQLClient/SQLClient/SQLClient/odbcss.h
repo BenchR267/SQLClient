@@ -128,6 +128,7 @@ extern "C" {
 #define SQL_CA_SS_XML_SCHEMACOLLECTION_NAME	(SQL_CA_SS_BASE+24)
 #endif
 
+#ifdef TDSODBC_BCP
 typedef struct tagSS_TIME2_STRUCT {
 	SQLUSMALLINT hour;
 	SQLUSMALLINT minute;
@@ -146,7 +147,7 @@ typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {
 	SQLSMALLINT timezone_hour;
 	SQLSMALLINT timezone_minute;
 } SQL_SS_TIMESTAMPOFFSET_STRUCT;
-
+#endif
 
 #ifdef TDSODBC_BCP
 
